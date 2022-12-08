@@ -1,0 +1,416 @@
+/* Main */
+
+@media (min-width: 1025px) {
+  main {
+    margin-top: -17px;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+  }
+
+  .current-video {
+    margin-left: 5.5%;
+  }
+}
+
+/* Header */
+
+@media (max-width: 1025px) {
+  header {
+    margin: 12px 20px 23px 16px;
+  }
+
+  .search-icon {
+    margin-right: 45px;
+  }
+}
+
+/* Playing video */
+
+@media (max-width: 1025px) {
+  .video-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(61, 61, 61, 0.5);
+    position: relative;
+    top: -48px;
+    margin: 6px;
+    border-radius: 10px;
+    padding: 9px 18px;
+  }
+
+  .panel-button {
+    height: 12px;
+  }
+
+  .playing-time {
+    font-size: 10px;
+  }
+
+  .progress {
+    width: 58%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .video-panel {
+    position: relative;
+    top: -137px;
+    margin: 0 33px;
+    display: grid;
+    grid-template-columns: repeat(3, min-content) auto repeat(4, min-content);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "t-st t-st . . . . t-end t-end"
+      "pr pr pr pr pr pr pr pr"
+      "pause next volume . subtitles settings size full-s";
+    align-items: center;
+  }
+
+  .progress.desktop {
+    grid-area: pr;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .playing-time.start {
+    grid-area: t-st;
+  }
+
+  .playing-time.end {
+    grid-area: t-end;
+    position: relative;
+    left: 46px;
+  }
+
+  .pause {
+    grid-area: pause;
+  }
+
+  .next {
+    grid-area: next;
+  }
+
+  .desktop.volume {
+    grid-area: volume;
+  }
+
+  .subtitles {
+    grid-area: subtitles;
+  }
+
+  .settings {
+    grid-area: settings;
+  }
+
+  .size {
+    grid-area: size;
+  }
+
+  .full-screen {
+    grid-area: full-s;
+  }
+
+  .playing-time {
+    font-size: 22px;
+  }
+
+  .pause,
+  .next,
+  .volume {
+    padding: 0 32px 0 9px;
+  }
+
+  .size,
+  .subtitles,
+  .settings,
+  .full-screen {
+    padding: 0 7px 0 18px;
+  }
+}
+
+.playing-time {
+  color: #fff;
+}
+
+.playing > img {
+  width: 100%;
+}
+
+/* Video name */
+
+@media (max-width: 1025px) {
+  .video-name {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto auto;
+    grid-template-areas: "name img" "views .";
+    margin: 0 20px 0 16px;
+  }
+
+  .video-name h1 {
+    grid-area: name;
+    font-size: 20px;
+    margin: -32px 60px 3px 0;
+    line-height: 25px;
+  }
+
+  .video-name span {
+    grid-area: views;
+    font-size: 12px;
+  }
+
+  .video-name img {
+    grid-area: img;
+    position: relative;
+    top: -20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .video-name h1 {
+    font-size: 36px;
+    margin: -81px 0 15px 0;
+  }
+
+  .video-name span {
+    font-size: 20px;
+    color: #c2c2c2;
+  }
+}
+
+/* Likes */
+
+@media (max-width: 1025px) {
+  .likes {
+    margin: 21px 0 21px 15px;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .likes {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -36px;
+    left: 7px;
+  }
+
+  .likes .more-button {
+    padding-left: 25px;
+  }
+}
+
+.likes span {
+  background-color: #ebebeb;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-right: 8px;
+}
+
+/* Channel caption */
+
+@media (max-width: 1025px) {
+  .channel-caption {
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0 15px 0;
+    margin: 0 20px 0 15px;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+  }
+
+  .channel-caption img {
+    width: 50px;
+  }
+
+  .channel-caption h2 {
+    font-size: 16px;
+  }
+
+  .subscribed-number {
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+  }
+
+  .subscribe {
+    color: #f00;
+  }
+}
+
+@media (min-width: 1025px) {
+  .channel-caption {
+    display: grid;
+    grid-template-columns: min-content auto max-content;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "ch-av name s" "ch-av publ s" "ch-av descr s" "ch-av more s";
+    align-items: start;
+    gap: 10px;
+    margin: -23px -3px;
+    padding-top: 38px;
+    border-top: 1px solid #d8d8d8;
+  }
+
+  .channel-caption img {
+    grid-area: ch-av;
+  }
+
+  .subscribe {
+    grid-area: s;
+    font-size: 16px;
+    background-color: #f00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .channel-caption h2 {
+    grid-area: name;
+    font-size: 26px;
+    margin: 3px 0px -5px;
+  }
+
+  .published {
+    grid-area: publ;
+    font-size: 13px;
+    color: #c2c2c2;
+  }
+
+  .show-more {
+    grid-area: more;
+    font-size: 20px;
+    color: #c2c2c2;
+  }
+
+  .description {
+    grid-area: descr;
+    margin: 5px 0px;
+    line-height: 22px;
+    width: 73%;
+  }
+}
+
+/* Autoplay */
+
+@media (max-width: 1025px) {
+  .autoplay {
+    padding: 3px 16px;
+  }
+
+  .autoplay img {
+    width: 30px;
+    top: 4px;
+    margin-left: 10px;
+  }
+
+  .autoplay span {
+    font-size: 10px;
+    top: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .autoplay {
+    padding: 3px 43px;
+  }
+
+  .autoplay img {
+    width: 44px;
+    top: 8px;
+    margin-left: 11px;
+  }
+
+  .autoplay span {
+    font-size: 16px;
+    top: 5px;
+    left: -27px;
+  }
+
+  .autoplay h3 {
+    font-size: 36px;
+    margin: 0;
+  }
+}
+
+.autoplay {
+  display: flex;
+  height: 45px;
+  justify-content: space-between;
+}
+
+.autoplay span,
+.autoplay img {
+  position: relative;
+}
+
+/* Videos */
+
+.videos {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1025px) {
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .videos img {
+    width: 100%;
+  }
+
+  .videos li {
+    padding: 10px 15px 20px 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .videos {
+    margin: 25px 70px 25px 44px;
+  }
+}
+
+/* labels of the video */
+
+@media (min-width: 1025px) {
+  .videos h3 {
+    font-size: 26px;
+    margin: 13px 0;
+  }
+
+  .video-info span {
+    font-size: 18px;
+    color: #c2c2c2;
+  }
+
+  .videos li {
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .videos h3 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .video-info span {
+    font-size: 13px;
+    color: #c2c2c2;
+  }
+}
+
+.video-info {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,303 @@
+@media (min-width: 1025px) {
+  main {
+    margin-top: -17px;
+    overflow-x: auto;
+  }
+}
+
+/* Header */
+
+@media (max-width: 1025px) {
+  header {
+    margin: 2px 20px 13px 16px;
+  }
+
+  .search-icon {
+    margin-right: 45px;
+  }
+
+  .background {
+    width: 100%;
+  }
+
+  .youtube-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .youtube-logo h2 {
+    font-size: 16px;
+  }
+}
+
+/* Channel header */
+
+@media (max-width: 1025px) {
+  .channel-info {
+    margin: 16px;
+  }
+
+  .channel-header .avatar {
+    width: 70px;
+    position: relative;
+    top: -55px;
+  }
+
+  .channel-header .wrapper {
+    margin: 16px;
+  }
+
+  .channel-header h2 {
+    margin: -55px 0 0;
+    font-size: 20px;
+  }
+
+  .subscribed-number {
+    color: #c2c2c2;
+    font-size: 12px;
+  }
+
+  .subscribe {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .channel-header {
+    margin-right: 70px;
+  }
+
+  .channel-info {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: max-content max-content auto max-content max-content;
+    grid-template-areas: "avatar main-info . notifications subscribe";
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .avatar {
+    grid-area: avatar;
+  }
+
+  .channel-main-info {
+    grid-area: main-info;
+  }
+
+  .ring {
+    grid-area: notifications;
+    margin: 9px;
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+    font-size: 17px;
+  }
+
+  .channel-main-info h2 {
+    margin: 19px 0 0 0;
+    font-size: 26px;
+  }
+
+  .subscribed-number {
+    font-size: 13px;
+    color: #c2c2c2;
+  }
+
+  .background {
+    width: 100%;
+  }
+}
+
+.subscribe {
+  background-color: #f00;
+  border: none;
+  color: #fff;
+  padding: 10px 17px;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Main video section */
+
+@media (max-width: 1025px) {
+  .main-video ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 0;
+  }
+
+  .main-video li {
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .home-red {
+    color: #f00;
+    border-bottom: 2px solid #f00;
+  }
+
+  .bottom-arrow {
+    margin-right: 19px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-video {
+    display: grid;
+    grid-template-columns: 24fr 5fr;
+    grid-template-rows: max-content auto;
+    grid-template-areas: "menu rec" "video rec";
+    margin-right: 4%;
+  }
+
+  aside {
+    grid-area: rec;
+  }
+
+  .main-video nav {
+    grid-area: menu;
+  }
+
+  .video-wrapper {
+    grid-area: video;
+  }
+
+  .channel-menu {
+    display: flex;
+    gap: 5.4%;
+    padding: 22px 0;
+    margin: 0;
+  }
+
+  .main-video li {
+    font-size: 18px;
+  }
+
+  .home-red {
+    color: #f00;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #f00;
+  }
+
+  aside {
+    margin-top: 23px;
+  }
+
+  aside ul {
+    padding: 0;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  aside figure {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .video-wrapper {
+    margin-top: 2.3%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+  }
+
+  .video-wrapper img {
+    width: 95%;
+  }
+
+  .main-video-info {
+    padding: 4px;
+  }
+
+  .main-video-info h3 {
+    font-size: 26px;
+    line-height: 34px;
+    margin: 16px 0 10px;
+  }
+
+  .main-video-info span {
+    line-height: 22px;
+  }
+
+  .main-video-info div {
+    color: #c2c2c2;
+    margin-top: 31px;
+  }
+}
+
+/* Videos */
+
+@media (max-width: 1025px) {
+  .videos {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .videos li {
+    padding: 0px 15px 29px 15px;
+  }
+
+  .videos img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .videos {
+    grid-template-columns: repeat(6, min-content);
+  }
+}
+
+.videos {
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+
+.videos-label {
+  font-size: 26px;
+  margin: 66px 0 30px 5px;
+}
+
+/* Labels of the video */
+
+.videos h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.video-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-info span {
+  font-size: 13px;
+  color: #c2c2c2;
+}
+
+/* Tables */
+
+@media (min-width: 1025px) {
+  .videos-table td {
+    padding-right: 37px;
+    width: 250px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: -10px;
+  }
+
+  .videos-table h3 {
+    font-size: 16px;
+    margin: 8px 0 5px;
+  }
+}

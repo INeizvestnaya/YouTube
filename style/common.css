@@ -1,0 +1,190 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+@media (max-width: 1025px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/* Desktop content layout */
+
+@media (min-width: 1025px) {
+  body.with-nav {
+    display: grid;
+    grid-template-columns: 255px auto;
+    grid-template-rows: min-content 3fr 4fr 3fr;
+    grid-template-areas: "header header" "nav main" "nav main" "nav main";
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+}
+
+/* Header */
+
+@media (max-width: 1025px) {
+  header {
+    grid-template-columns: auto max-content max-content;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    grid-template-columns: 50px 175px auto repeat(4, 74px);
+    margin: 1% 35px 2.6% 32px;
+  }
+
+  .search-icon {
+    position: relative;
+    left: -40px;
+    top: 3px;
+  }
+
+  .user-avatar {
+    width: 40px;
+  }
+}
+
+header {
+  display: grid;
+  align-items: center;
+}
+
+header .notifications {
+  margin-right: -15px;
+}
+
+.notifications-number {
+  background-color: #f00;
+  color: #fff;
+  padding: 3px 5px 3px 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  position: relative;
+  top: -15px;
+  left: -15px;
+}
+
+input {
+  background-color: #ebebeb;
+  border: none;
+  border-radius: 22px;
+  font-size: 16px;
+  color: #30384c;
+  padding: 12px 23px 12px 23px;
+  width: 62%;
+}
+
+input:hover {
+  border: none;
+}
+
+/* Navigation bar */
+
+@media (max-width: 1025px) {
+  body > nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 0;
+    border-top: 2px solid #f1f1f1;
+  }
+
+  nav figure {
+    margin: 0;
+    text-align: center;
+  }
+
+  nav figcaption {
+    font-size: 10px;
+  }
+
+  body > nav img {
+    height: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body > nav {
+    margin: 0 35px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav figure {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 15px;
+  }
+
+  nav figcaption {
+    font-size: 16px;
+  }
+}
+
+.subscriptions-label {
+  margin: 0;
+  margin-top: 20%;
+}
+
+.main-nav-margin {
+  margin-bottom: 20%;
+}
+
+.settings-margin {
+  margin-top: 40%;
+}
+
+nav figcaption {
+  color: #898989;
+  margin-top: 2px;
+}
+
+/* Videos */
+
+.time {
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 3px 8px 3px 8px;
+  float: right;
+  position: relative;
+  top: -38px;
+  left: -13px;
+}
